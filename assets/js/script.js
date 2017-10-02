@@ -14,3 +14,17 @@ $("li span").click(function(event) {
     // stop event bubbling
     event.stopPropagation();
 });
+
+// create new todo
+$("input[type='text']").keypress(function(event) {
+    if (event.which === 13) {
+        // take text from input
+        var todo = $(this).val();
+        // create new li
+        var li = `<li><span>X</span> ${todo}</li>`
+        // add new li to ul
+        $("ul").append(li);
+        // clear input
+        $(this).val("");
+    }
+});
