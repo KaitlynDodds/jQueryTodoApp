@@ -21,7 +21,7 @@ $("input[type='text']").keypress(function(event) {
         // take text from input
         var todo = $(this).val();
         // create new li
-        var li = `<li><span>X</span> ${todo}</li>`
+        var li = `<li><span><i class='fa fa-trash'></i></span> ${todo}</li>`
         // add new li to ul
         $("ul").append(li);
         // clear input
