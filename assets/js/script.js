@@ -28,3 +28,8 @@ $("input[type='text']").keypress(function(event) {
         $(this).val("");
     }
 });
+
+// toggle 'Add New Todo' input
+$(".fa-plus").click(function() {
+    $("input[type='text']").fadeToggle();
+});
